@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ASP.NET_Pluralsight.Core\ASP.NET_Pluralsight.Core.csproj" />
+    <ProjectReference Include="..\ASP.NET_Pluralsight.Data\ASP.NET_Pluralsight.Data.csproj" />
+  </ItemGroup>
+
+</Project>
