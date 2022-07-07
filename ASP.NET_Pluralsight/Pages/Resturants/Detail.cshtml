@@ -1,0 +1,18 @@
+﻿@page "{resturantId:int}"
+@model ASP.NET_Pluralsight.Pages.Resturants.DetailModel
+@{
+}
+<h1>@Model.Resturant.Name</h1>
+<div>
+    Id : @Model.Resturant.Id
+</div>
+<div>
+    Name : @Model.Resturant.Name
+</div>
+<div>
+    Location : @Model.Resturant.Location
+</div>
+<div>
+    Cuisine : @Model.Resturant.Cuisine
+</div>
+<a asp-page="./List" class="btn btn-primary">All Resturants</a>

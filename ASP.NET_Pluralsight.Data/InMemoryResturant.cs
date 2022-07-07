@@ -1,10 +1,9 @@
-﻿using ASP.NET_Pluralsight.Core;
-
-namespace ASP.NET_Pluralsight.Data
+﻿namespace ASP.NET_Pluralsight.Data
 {
     public interface IResturantData
     {
-        public IEnumerable<Resturant> GetAll();
+        public IEnumerable<Resturant> GetResturantByName(string name);
+        public Resturant GetResturantById(int id);
     }
     public class InMemoryResturant : IResturantData
     {
@@ -19,9 +18,16 @@ namespace ASP.NET_Pluralsight.Data
                 new Resturant { Id = 3, Name = "La Costa", Location = "California", Cuisine=CuisineType.Mexican}
             };
         }
-        public IEnumerable<Resturant> GetAll()
+
+        public Resturant GetResturantById(int id)
+        {
+            return resturants.SingleOrDefault(e => e.Id == id);
+        }
+
+        public IEnumerable<Resturant> GetResturantByName(string name)
         {
             return from r in resturants
+                   where string.IsNullOrEmpty(name) || r.Name.StartsWith(name)
                    orderby r.Name
                    select r;
         }
