@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32611.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NET_Pluralsight", "ASP.NET_Pluralsight\ASP.NET_Pluralsight.csproj", "{EB964E70-1F29-4927-8A1B-CC7DDBCD0BBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASP.NET_Pluralsight", "ASP.NET_Pluralsight\ASP.NET_Pluralsight.csproj", "{EB964E70-1F29-4927-8A1B-CC7DDBCD0BBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NET_Pluralsight.Core", "ASP.NET_Pluralsight.Core\ASP.NET_Pluralsight.Core.csproj", "{AD12ECBE-62BA-4DCE-A5F2-B5A1A107A9FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASP.NET_Pluralsight.Core", "ASP.NET_Pluralsight.Core\ASP.NET_Pluralsight.Core.csproj", "{AD12ECBE-62BA-4DCE-A5F2-B5A1A107A9FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NET_Pluralsight.Data", "ASP.NET_Pluralsight.Data\ASP.NET_Pluralsight.Data.csproj", "{23964BFB-33F4-4D9F-9C79-2D45A3BABC11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASP.NET_Pluralsight.Data", "ASP.NET_Pluralsight.Data\ASP.NET_Pluralsight.Data.csproj", "{23964BFB-33F4-4D9F-9C79-2D45A3BABC11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

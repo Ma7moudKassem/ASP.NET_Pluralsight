@@ -1,10 +1,5 @@
 ﻿namespace ASP.NET_Pluralsight.Data
 {
-    public interface IResturantData
-    {
-        public IEnumerable<Resturant> GetResturantByName(string name);
-        public Resturant GetResturantById(int id);
-    }
     public class InMemoryResturant : IResturantData
     {
         readonly List<Resturant> resturants;
@@ -19,6 +14,18 @@
             };
         }
 
+        public Resturant Add(Resturant newResturant)
+        {
+            resturants.Add(newResturant);
+            newResturant.Id = resturants.Max(e => e.Id)+1;
+            return newResturant;
+        }
+
+        public int Commit()
+        {
+            return 0;
+        }
+
         public Resturant GetResturantById(int id)
         {
             return resturants.SingleOrDefault(e => e.Id == id);
@@ -30,6 +37,18 @@
                    where string.IsNullOrEmpty(name) || r.Name.StartsWith(name)
                    orderby r.Name
                    select r;
+        }
+
+        public Resturant Update(Resturant updatedResturant)
+        {
+            var resturant = resturants.SingleOrDefault(e => e.Id == updatedResturant.Id);
+            if (resturant != null)
+            {
+                resturant.Name = updatedResturant.Name;
+                resturant.Location = updatedResturant.Location;
+                resturant.Cuisine = updatedResturant.Cuisine;
+            }
+            return resturant;
         }
     }
 }

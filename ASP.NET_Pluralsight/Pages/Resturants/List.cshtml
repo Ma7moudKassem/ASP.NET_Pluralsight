@@ -29,7 +29,16 @@
                 >
                 <i class="glyphicon glyphicon-zoom-in"></i>
                 Go </a>
+            </td> 
+            <td>
+                <a class="btn btn-primary"
+                asp-page="./Edit"
+                asp-route-resturantId="@resturant.Id"
+                >
+                <i class="glyphicon glyphicon-zoom-in"></i>
+                Edit </a>
             </td>
         </tr>
     }
 </table>
+<a asp-page="./Edit" class="btn btn-primary">Add</a>
