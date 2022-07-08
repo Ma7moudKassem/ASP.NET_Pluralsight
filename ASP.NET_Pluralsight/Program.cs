@@ -1,7 +1,13 @@
+using Microsoft.Extensions.Configuration;
+
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
+var connectionString = builder.Configuration
+                              .GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<ApplicationDbContext>(options => 
+                                                    options.UseSqlServer(connectionString));
 builder.Services.AddRazorPages();
-builder.Services.AddSingleton<IResturantData, InMemoryResturant>();
+builder.Services.AddScoped<IResturantData, SqlResturantData>();
 
 var app = builder.Build();
 

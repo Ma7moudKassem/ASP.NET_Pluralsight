@@ -21,16 +21,10 @@
             return newResturant;
         }
 
-        public int Commit()
-        {
-            return 0;
-        }
-
         public Resturant GetResturantById(int id)
         {
             return resturants.SingleOrDefault(e => e.Id == id);
         }
-
         public IEnumerable<Resturant> GetResturantByName(string name)
         {
             return from r in resturants
@@ -49,6 +43,19 @@
                 resturant.Cuisine = updatedResturant.Cuisine;
             }
             return resturant;
+        }
+        public Resturant Delete(int id)
+        {
+            var resturant = resturants.FirstOrDefault(e => e.Id == id);
+            if (resturant != null)
+            {
+                resturants.Remove(resturant);
+            }
+            return resturant;
+        }
+        public int Commit()
+        {
+            return 0;
         }
     }
 }

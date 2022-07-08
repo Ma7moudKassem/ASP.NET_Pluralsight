@@ -6,6 +6,7 @@
         public Resturant GetResturantById(int id);
         Resturant Update(Resturant updatedResturant);
         int Commit();
-        public Resturant Add(Resturant newReesyurant);
+        public Resturant Add(Resturant newResturant);
+        public Resturant Delete(int id);
     }
 }
